@@ -1,0 +1,41 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{%static '../static/assets/stylesheet11.css'%}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="{% static '../static/assets/coffee.png' %}">
+    <ul>
+        <li><a href="{% url 'core:index'%}">Home</a></li>
+        <li><a href="{% url 'core:index'%}">News</a></li>
+        <li><a href="{% url 'core:index'%}">Contact</a></li>
+        <li><a href="{% url 'core:index'%}">About</a></li>
+    </ul>
+<title>Confirmation</title>
+<hr>
+</head>
+<body>    
+<br>
+<br>
+<h1>Confirmation</h1>
+
+    <img src="{%static 'assets/check-mark.png'%}" alt="">
+
+    <h3>Your order has been processed!</h3>
+    <p>A confirmation email will be sent shortly.</p>
+    <p>A text and email will be sent once your order is ready.</p>
+
+
+
+    <div class="footer">
+    
+        <h3>
+            <a href=""><img src="{% static '../static/assets/twitter.png' %}" alt="" class="social-icon"></a>
+            <a href=""><img src="{% static '../static/assets/instagram.png' %}" alt="" class="social-icon"></a>
+            <a href=""><img src="{% static '../static/assets/youtube.png' %}" alt="" class="social-icon"></a>
+        </h3>
+    </div>
+    
+</body>
+</html>

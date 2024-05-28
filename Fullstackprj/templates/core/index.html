@@ -1,0 +1,95 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{%static '../static/assets/stylesheet.css'%}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{% static '../static/assets/coffee.png' %}">
+   
+    <div class="navbar">
+      <a href="{% url 'core:index'%}">Home</a>
+      <a href="{% url 'core:contact'%}">Contact</a>
+      <a href="{% url 'core:about'%}">About</a>
+      <div class="dropdown">
+          <button class="dropbtn" onclick= myFunction()>Services
+          </button>
+          <div class="dropdown-content" id="myDropdown">
+              <a href="{% url 'core:space'%}">Book a Space</a>
+              <a href="{% url 'core:baking'%}">Book Online Baking Lessons</a>
+              <a href="{% url 'core:collection'%}">Order Baked Goods For Collection</a>
+              <a href="{% url 'core:custom'%}">Order Customisable Baked Hampers</a>
+              <a href="{% url 'core:social-media'%}">Share on Social Media(Rate my Cake)</a>
+          </div>
+      </div> 
+    </div>
+  
+
+
+
+
+
+
+    <title>Bean and Brew</title>
+</head>
+<body>
+ 
+
+    <div class="homepic">
+        
+    </div>
+    <br>
+    <br>
+    <div class="strokeme"><h1>Bean and Brew</h1></div>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="{% url 'core:login'%}" >
+    <button class="btn">Login!</button>
+    </a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br> <br>
+    <br>
+   
+
+    
+    <div class="footer">
+    
+        <h3>
+            <a href=""><img src="{% static '../static/assets/twitter.png' %}" alt="" class="social-icon"></a>
+            <a href=""><img src="{% static '../static/assets/instagram.png' %}" alt="" class="social-icon"></a>
+            <a href=""><img src="{% static '../static/assets/youtube.png' %}" alt="" class="social-icon"></a>
+        </h3>
+    </div>
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+          if (!e.target.matches('.dropbtn')) {
+          var myDropdown = document.getElementById("myDropdown");
+            if (myDropdown.classList.contains('show')) {
+              myDropdown.classList.remove('show');
+            }
+          }
+        }
+    </script>
+</body>
+</html>

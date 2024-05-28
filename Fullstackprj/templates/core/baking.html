@@ -1,0 +1,63 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{%static '../static/assets/stylesheet6.css'%}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="{% static '../static/assets/coffee.png' %}">
+      <ul>
+          <li><a href="{% url 'core:index'%}">Home</a></li>
+          <li><a href="{% url 'core:news'%}">News</a></li>
+          <li><a href="{% url 'core:contact'%}">Contact</a></li>
+          <li><a href="{% url 'core:about'%}">About</a></li>
+      </ul>
+    <title>Book online baking lessons</title>
+</head>
+
+<body>
+<br>
+<br>
+<h1>Book online baking lessons</h1><hr>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br><br><br>
+    <img src="{% static '../static/assets/video-lesson.png' %}" alt="">
+    
+    
+    <h3>Book online baking lessons</h3>
+    <form action="reservation.php" method="post">
+        <div class="elem-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+        </div>
+        <div class="elem-group">
+          <label for="email">Your E-mail</label>
+          <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+        </div>
+        <div class="elem-group">
+          <label for="phone">Your Phone</label>
+          <input type="tel" id="phone" name="visitor_phone" placeholder="07570777553" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+        </div>
+        <div class="elem-group">
+          <label for="message">Anything Else?</label>
+          <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+        </div>
+        <a href="{% url 'core:confirmation'%}"><button type="submit">Book The Onine Lesson</button></a>
+      </form>
+      <a href="{% url 'core:services'%}"><button>Cancel</button></a>
+    
+
+
+    <div class="footer">
+    
+        <h3>
+            <a href=""><img src="{% static '../static/assets/twitter.png' %}" alt="" class="social-icon"></a>
+            <a href=""><img src="{% static '../static/assets/instagram.png' %}" alt="" class="social-icon"></a>
+            <a href=""><img src="{% static '../static/assets/youtube.png' %}" alt="" class="social-icon"></a>
+        </h3>
+    </div>
+</body>
+</html>
